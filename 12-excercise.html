@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12 Excercises</title>
+
+  </head>
+  <body>
+    <button onclick="
+    messages++;
+    ">Add</button>
+    <button onclick="
+    messages--;
+    ">Remove</button>
+
+    <button class="start-button" >Start</button>
+
+    <script>
+      const add=function(){
+        console.log(2+3);
+      }
+
+      add();
+      add();
+
+      function runTwice(fun){
+        fun();
+        fun();
+      }
+
+      runTwice(function(){
+        console.log('12b');
+      })
+      runTwice(add);
+
+      function updateButton(){
+        const button=document.querySelector('.start-button');
+        setTimeout(function(){
+          button.innerHTML='Finished';
+        },1000)
+      button.innerHTML='Loading...';
+      }
+
+
+      function updateCartButton()
+      {
+        const cartButton=document.querySelector('.p_button');
+        
+        let timeout = setTimeout(function(){
+          cartButton.innerHTML='';
+        },2000)
+        cartButton.innerHTML='Added';
+        clearTimeout(timeoutId);
+      }
+      let messages=2;
+      setInterval(function(){
+        
+        if(document.title==='12 Excercises'){
+          document.title=`(${messages}) New messages`;
+        }
+        else{
+          document.title='12 Excercises';
+        }
+      },1000);
+
+      const multiply=(a,b)=> console.log(a*b);
+      let positiveNumbers=0;
+      multiply(2,3);
+      multiply(5,6);
+
+      function countPossitive(nums){
+        nums.forEach((num)=>{
+          if(num>0){
+            positiveNumbers++;
+          }
+          
+        });
+        return positiveNumbers;
+      }
+      console.log(countPossitive([1,-2,3,4,5,5,-3,-34,23]));
+
+      function addNum(array,num){
+        return array.map((value)=>value+num);
+      }
+      console.log(addNum([1,2,3,4],6));
+      let removed=0
+      function removeEgg(foods){
+        return foods.filter((food)=> {
+          if(food==='egg' && removed<2){
+            removed++;
+            return false;
+          }
+          return true;
+        })
+      }
+
+      console.log(removeEgg(['egg','apple','egg','ham','pine apple']));
+
+      
+    document.querySelector('.start-button').addEventListener('click',()=>{
+      const button=document.querySelector('.start-button');
+
+      setTimeout(()=>{
+        button.innerHTML='Finished';
+      },1000);
+    })
+    </script>
+    
+    <button class="cart-button" onclick="
+    updateCartButton();
+    ">Add to cart</button>
+    <p class="p_button"></p>
+
+
+  </body>
+</html>

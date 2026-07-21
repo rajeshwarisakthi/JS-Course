@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>11 Part2 excercise</title>
+  </head>
+  <body>
+    <script>
+      function searchIndex(array){
+        let index=-1;
+
+        for(let i=0;i<array.length;i++){
+          if(array[i]==='search'){
+            index=i;
+            break;
+          }
+        }
+        console.log(index);
+      }
+
+      let array=['hello','world','search','search'];
+      searchIndex(array);
+      let arrays=['not','found'];
+      searchIndex(arrays);
+
+      function findIndex(arrays,value){
+        let indexs=-1;
+        for(let i=0;i<arrays.length;i++){
+          if(arrays[i]=='red'){
+            index=i;
+            break;
+          }
+        }
+        console.log(index);
+      }
+
+      let find_index=['green','red','blue','red'];
+      findIndex(find_index);
+
+      function removeegg(foods){
+        let reverse=foods.reverse();
+        let result=[];
+        let removed=0;
+        for(let i=0;i<reverse.length;i++){
+          if(reverse[i]==='egg' && removed<2){
+            removed++;
+            continue;
+          }
+          result.push(foods[i]);
+        }
+        result.reverse();
+        console.log(result);
+      }
+      let foods=['egg','apple','egg','egg','ham'];
+      removeegg(foods);
+
+      for(let i=0;i<=50;i++){
+        if(i%3===0 && i%5===0){
+          console.log('FizzBuzz');
+        }
+        else if(i%3===0){
+          console.log('Fizz');
+        }
+        else if(i%5===0){
+          console.log('Buzz');
+        }
+        console.log(i);
+      }
+
+      function find_indexs(array,word){
+        for(let i=0;i<array.length;i++){
+          if(array[i]===word){
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      function unique(array){
+        result=[];
+        for(let i=0;i<array.length;i++){
+          const word=array[i];
+            if(find_indexs(result,word)===-1){
+              result.push(word);
+            }
+      }
+      return result;
+    }
+
+      console.log(unique(['green','red','blue','red']));
+      console.log(unique(['red','green','green','red']));
+    </script>
+
+    
+  </body>
+</html>

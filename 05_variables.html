@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Variables-cart quantity</title>
+  
+</head>
+<body>
+  <button onclick="
+  console.log(`cart Quantity : ${cartQuantity}`);
+  ">Show Quantity</button>
+  <button 
+  onclick="
+  if(cartQuantity>=10){
+  console.log('cart is full')}
+  else{
+  cartQuantity=cartQuantity+1;
+  console.log(`cartQuantity : ${cartQuantity}`);}
+  "
+  >Add to cart</button>
+  <button
+  onclick="
+  if(cartQuantity>=10){
+  console.lof('Crt is fuoll');}
+  else{
+  cartQuantity=cartQuantity+2;
+  console.log(`cartQuantity : ${cartQuantity}`);}
+  "
+  >+2</button>
+  <button
+  onclick="
+  if(cartQuantity>=10){
+  console.log('cart is full');}
+  else{
+  cartQuantity=cartQuantity+3;
+  console.log(`cartQuantity : ${cartQuantity}`);}"
+  >+3</button>
+  <button
+  onclick="
+  if(cartQuantity>=10){
+  console.log('Cart is full');
+  }
+  else{
+  cartQuantity+=4;
+  console.log(`cartQuantity : ${cartQuantity}`);}
+  "
+  >+4</button>
+  <button onclick="
+  if(cartQuantity>=10){
+  console.log('cart is full');}
+  else{
+  cartQuantity+=5;
+  console.log(`cartQuantity : ${cartQuantity}`);}
+  ">+5</button>
+  <button
+  onclick="cartQuantity=0;
+  console.log(`cartQuantity : ${cartQuantity}`);
+  ">Reset Cart</button>
+
+    <button onclick="
+  if(cartQuantity<=0 && cartQuantity<2){
+  console.log('cart does not have enaugh items');}
+  else{
+  cartQuantity-=2;
+  console.log(`cartQuantity : ${cartQuantity}`);}
+  ">-2</button>
+
+    <button onclick="
+    if(cartQuantity<=0 && cartQuantity<3){
+  console.log('cart does not have enaugh items');}
+  else{
+  cartQuantity-=3;
+  console.log(`cartQuantity : ${cartQuantity}`);}
+  ">-3</button>
+
+
+  <button onclick="
+  if(cartQuantity<=0 && cartQuantity<1){
+  console.log('cart does not have enaugh items');}
+  else{
+  cartQuantity-=1;
+  console.log(`cartQuantity : ${cartQuantity}`);}
+  ">Remove from cart</button>
+<p>
+  <button onclick="
+  calculation+='1';
+  console.log(`alculation : ${calculation}`);
+  ">1</button>
+  <button 
+  onclick="
+  calculation+='2';
+  console.log(`calculation : ${calculation}`);
+  "
+  >2</button>
+  <button 
+  onclick="
+  calculation+='3';
+  console.log(`calculation : ${calculation}`);
+  "
+  >3</button>
+  <button
+  onclick="
+  calculation+='4';
+  console.log(`calculation : ${calculation}`);
+  " 
+  >4</button>
+  <button 
+  onclick="
+  calculation+='5';
+  console.log(`calculation : ${calculation}`);
+  "
+  >5</button>
+  <button 
+  onclick="
+  calculation+='6';
+  console.log(`calculation : ${calculation}`);
+  "
+  >6</button>
+  <button 
+  onclick="
+  calculation+='7';
+  console.log(`calculation : ${calculation}`);
+  "
+  >7</button>
+  <button 
+  onclick="
+  calculation+='8';
+  console.log(`calculation : ${calculation}`);
+  "
+  >8</button>
+  <button 
+  onclick="
+  calculation+='9';
+  console.log(`calculation : ${calculation}`);
+  "
+  >9</button>
+  <button 
+  onclick="
+  calculation+='+';
+  console.log(`calculation : ${calculation}`);
+  "
+  >+</button>
+  <button 
+  onclick="
+  calculation+=eval(calculation);
+  console.log(`calculation : ${ calculation}`);
+  "
+  >=</button>
+  </p>
+  <script>
+    
+    
+    let cartQuantity=0;
+    let name='Raji';
+    console.log(name);
+
+    console.log(`my name is : ${name}`);
+
+    let cofee=5, bagels=3, soup=9;
+    let cost=(1*cofee)+(3*bagels)+(1*soup);
+    console.log(`cost is $${cost}`);
+    console.log(`the tax is $${cost/10}`);
+    console.log(`the total cost is $${(cost)+(cost/10)}`);
+
+    let calculation='';
+  </script>
+</body>
+</html>

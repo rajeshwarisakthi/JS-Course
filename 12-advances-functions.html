@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+     <link rel="stylesheet" href="styles/12-rock-paper-scissors.css">
+  </head>
+  <body>
+
+    <p class="title">Rock Paper Scissors.</p>
+    <button onclick="
+    playGame('Rock');
+    " class="move-button"><img src="images/Rock_emoji.jpg" class="move-icon"></button>
+    <button onclick="
+      playGame('Paper');
+      "  class="move-button"><img src="images/Paper_emoji.jpg" class="move-icon"></button>
+    <button  onclick="
+      playGame('Scissors');
+      "  class="move-button"><img src="images/Scissors_emoji.jpg" class="move-icon"></button>
+
+      <p class="js-result result"></p>
+      <p class="js-moves"></p>
+      <p class="js-score score"></p>
+
+      <button
+      onclick="
+      score.wins=0;
+      score.losses=0;
+      score.ties=0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+      "
+      class="reset-score-button"
+      >Reset score</button>
+
+
+      <button class="auto-play-button" onclick="
+      autoPlay();
+      ">Auto play</button>
+
+
+      <script src="scripts/12-rock-paper-scissors.js">
+      
+
+    /*const object={
+      name:'Raji'
+    };
+    console.log(object);
+    console.log(object.name);
+    console.log(object.name='Sabari');
+
+    const object2={
+      message:'Hello',
+      price:799
+    }
+    console.log(object2);
+
+    const object3= object2;
+    console.log(object3);
+    console.log(object2===object3);
+
+    const {message,price}=object2;
+    console.log(message);
+    console.log(price);*/
+     </script> 
+
+    <script>
+     /* setTimeout(function() {
+        console.log('timeout');
+        console.log('timeout2');
+      },3000);
+
+      console.log('next line');
+
+      setInterval(function(){
+        console.log('interval');
+      }, 3000);  
+      console.log('next line 2');
+*/
+
+    </script>
+  </body>
+</html>
